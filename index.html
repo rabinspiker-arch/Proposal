@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>A Special Surprise ❤️</title>
+<style>
+body{
+margin:0;
+background:linear-gradient(135deg,#ff4b91,#ff7eb3);
+font-family:Arial,sans-serif;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+overflow:hidden;
+color:white;
+text-align:center;
+}
+.box{
+background:rgba(255,255,255,0.15);
+padding:30px;
+border-radius:20px;
+backdrop-filter:blur(8px);
+box-shadow:0 0 20px rgba(0,0,0,.3);
+}
+button{
+padding:12px 24px;
+font-size:18px;
+margin:10px;
+border:none;
+border-radius:30px;
+cursor:pointer;
+}
+#yes{background:#00c853;color:white;}
+#no{background:#ff1744;color:white;position:absolute;}
+</style>
+</head>
+<body>
+
+<div class="box">
+<h1>❤️ I Have Something Special ❤️</h1>
+<h2>Will You Be My Girlfriend? 🌹</h2>
+
+<button id="yes" onclick="yes()">Yes ❤️</button>
+<button id="no">No 😅</button>
+
+<p id="msg"></p>
+</div>
+
+<script>
+function yes(){
+document.getElementById("msg").innerHTML="🥰 You just made me the happiest person! ❤️";
+}
+
+const no=document.getElementById("no");
+no.addEventListener("mouseover",()=>{
+no.style.left=Math.random()*(window.innerWidth-100)+"px";
+no.style.top=Math.random()*(window.innerHeight-50)+"px";
+});
+</script>
+
+</body>
+</html>
